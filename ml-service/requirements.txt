@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+sentence-transformers
+scikit-learn
+PyPDF2
+python-docx
+torch
+transformers
+pandas
+yake

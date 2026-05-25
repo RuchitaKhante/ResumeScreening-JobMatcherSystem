@@ -1,0 +1,51 @@
+id,company,description,location,title
+1,Tata Consultancy Services,"Looking for a Python developer with knowledge of data analysis, pandas, and REST APIs to build scalable backend services.","Mumbai, Maharashtra",Python Developer
+2,Infosys,"Responsible for building machine learning models for business analytics using Python, scikit-learn, and data visualization tools.","Bangalore, Karnataka",Machine Learning Engineer
+3,Wipro,Develop backend services using Java Spring Boot and integrate MySQL databases for enterprise applications.,"Hyderabad, Telangana",Backend Developer
+4,HCLTech,Analyze large datasets using SQL and Power BI to create dashboards for business decision making.,"Noida, Uttar Pradesh",Data Analyst
+5,Tech Mahindra,Build and maintain React based web interfaces and integrate with REST APIs.,"Pune, Maharashtra",Frontend Developer
+6,Zoho,Design scalable cloud applications and maintain APIs for SaaS products.,"Chennai, Tamil Nadu",Software Engineer
+7,Flipkart,Develop recommendation systems using Python and machine learning libraries.,"Bangalore, Karnataka",Data Scientist
+8,Paytm,Work on payment gateway backend systems and optimize high volume transaction systems.,"Noida, Uttar Pradesh",Backend Engineer
+9,Swiggy,Analyze delivery and logistics data to improve route optimization and customer experience.,"Bangalore, Karnataka",Data Analyst
+10,Zomato,Develop scalable microservices for restaurant management platforms.,"Gurgaon, Haryana",Software Developer
+11,Reliance Jio,Develop telecom analytics dashboards using Python and SQL.,"Mumbai, Maharashtra",Data Engineer
+12,Ola,Create predictive models for ride demand forecasting.,"Bangalore, Karnataka",Machine Learning Engineer
+13,Byju's,Build data pipelines and analytics dashboards for educational data.,"Bangalore, Karnataka",Data Engineer
+14,Freshworks,Develop SaaS CRM platforms using JavaScript and cloud infrastructure.,"Chennai, Tamil Nadu",Full Stack Developer
+15,PhonePe,Work on financial transaction systems and fraud detection models.,"Bangalore, Karnataka",Data Scientist
+16,Cognizant,Develop enterprise web applications using Java and Spring Boot.,"Chennai, Tamil Nadu",Software Engineer
+17,Capgemini,Maintain data warehouses and perform ETL operations using SQL and Python.,"Mumbai, Maharashtra",ETL Developer
+18,L&T Infotech,Develop AI based predictive maintenance systems.,"Mumbai, Maharashtra",AI Engineer
+19,Mindtree,Design scalable APIs and integrate cloud services.,"Bangalore, Karnataka",Backend Developer
+20,Amazon India,Build large scale distributed systems and recommendation engines.,"Hyderabad, Telangana",Software Development Engineer
+21,Google India,Develop machine learning infrastructure and scalable AI models.,"Bangalore, Karnataka",ML Engineer
+22,Microsoft India,Build cloud based applications on Azure platform.,"Hyderabad, Telangana",Cloud Engineer
+23,Adobe India,Develop creative cloud features and AI based image processing tools.,"Noida, Uttar Pradesh",Software Engineer
+24,Intel India,Work on embedded systems and hardware-software integration.,"Bangalore, Karnataka",Embedded Engineer
+25,IBM India,Develop enterprise AI solutions using Python and Watson APIs.,"Pune, Maharashtra",AI Developer
+26,SAP Labs India,Design enterprise resource planning modules and backend services.,"Bangalore, Karnataka",Software Developer
+27,Accenture India,Analyze business data and develop BI dashboards.,"Mumbai, Maharashtra",Business Intelligence Analyst
+28,Deloitte India,Work with big data technologies to perform analytics for consulting clients.,"Hyderabad, Telangana",Big Data Engineer
+29,EY India,Develop data visualization dashboards using Tableau and Power BI.,"Gurgaon, Haryana",Data Analyst
+30,KPMG India,Perform predictive analytics and statistical modeling.,"Mumbai, Maharashtra",Data Scientist
+31,Tata Elxsi,Develop AI based automotive solutions.,"Bangalore, Karnataka",AI Engineer
+32,Bosch India,Work on IoT based smart manufacturing systems.,"Bangalore, Karnataka",IoT Engineer
+33,Mahindra Tech,Develop enterprise applications for automotive analytics.,"Pune, Maharashtra",Software Engineer
+34,RedBus,Build booking platform backend services and optimize search performance.,"Bangalore, Karnataka",Backend Developer
+35,MakeMyTrip,Develop travel recommendation engines using machine learning.,"Gurgaon, Haryana",ML Engineer
+36,ClearTax,Build fintech platforms and automate tax calculations.,"Bangalore, Karnataka",Full Stack Developer
+37,Razorpay,Develop payment APIs and financial transaction monitoring systems.,"Bangalore, Karnataka",Backend Engineer
+38,Groww,Develop investment analytics dashboards for users.,"Bangalore, Karnataka",Data Analyst
+39,PolicyBazaar,Create recommendation models for insurance products.,"Gurgaon, Haryana",Data Scientist
+40,Nykaa,Analyze e-commerce user behavior and sales data.,"Mumbai, Maharashtra",Business Analyst
+41,Dream11,Develop high performance sports analytics systems.,"Mumbai, Maharashtra",Data Engineer
+42,CRED,Build fintech analytics models and backend microservices.,"Bangalore, Karnataka",Software Engineer
+43,Delhivery,Optimize logistics operations using data science.,"Gurgaon, Haryana",Data Scientist
+44,Urban Company,Develop scheduling algorithms and backend APIs.,"Gurgaon, Haryana",Backend Developer
+45,PayU India,Develop secure fintech systems and payment APIs.,"Gurgaon, Haryana",Software Engineer
+46,Postman,Develop API testing and collaboration tools.,"Bangalore, Karnataka",Software Developer
+47,InMobi,Build ad recommendation engines using machine learning.,"Bangalore, Karnataka",Machine Learning Engineer
+48,BrowserStack,Develop cloud based testing infrastructure.,"Mumbai, Maharashtra",Cloud Engineer
+49,Unacademy,Develop educational analytics dashboards.,"Bangalore, Karnataka",Data Analyst
+50,UpGrad,Develop recommendation engines for course suggestions.,"Mumbai, Maharashtra",Data Scientist

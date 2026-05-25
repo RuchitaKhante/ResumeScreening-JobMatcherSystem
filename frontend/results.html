@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Match Result | JobMatch AI</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+
+            font-family:'Poppins',sans-serif;
+
+            background:
+                radial-gradient(circle at top left,#1e293b,#0f172a);
+
+            min-height:100vh;
+
+            overflow-x:hidden;
+
+            color:white;
+        }
+
+        /* NAVBAR */
+
+        .navbar{
+
+            width:100%;
+
+            padding:22px 70px;
+
+            display:flex;
+
+            justify-content:space-between;
+
+            align-items:center;
+
+            position:fixed;
+
+            top:0;
+
+            z-index:1000;
+
+            background:rgba(15,23,42,0.6);
+
+            backdrop-filter:blur(18px);
+
+            border-bottom:1px solid rgba(255,255,255,0.08);
+        }
+
+        .logo{
+
+            font-size:28px;
+
+            font-weight:800;
+
+            background:linear-gradient(90deg,#38bdf8,#8b5cf6);
+
+            -webkit-background-clip:text;
+
+            -webkit-text-fill-color:transparent;
+        }
+
+        .nav-links{
+
+            display:flex;
+
+            gap:35px;
+        }
+
+        .nav-links a{
+
+            text-decoration:none;
+
+            color:#e2e8f0;
+
+            font-size:15px;
+
+            transition:0.3s;
+        }
+
+        .nav-links a:hover{
+
+            color:#38bdf8;
+        }
+
+        /* MAIN */
+
+        .main-container{
+
+            min-height:100vh;
+
+            display:flex;
+
+            justify-content:center;
+
+            align-items:center;
+
+            padding:140px 20px 60px;
+        }
+
+        .result-card{
+
+            width:100%;
+
+            max-width:720px;
+
+            background:rgba(255,255,255,0.06);
+
+            border:1px solid rgba(255,255,255,0.08);
+
+            backdrop-filter:blur(20px);
+
+            border-radius:30px;
+
+            padding:55px 45px;
+
+            text-align:center;
+
+            box-shadow:
+                0 25px 60px rgba(0,0,0,0.4);
+        }
+
+        .badge{
+
+            display:inline-block;
+
+            padding:10px 22px;
+
+            border-radius:50px;
+
+            background:rgba(56,189,248,0.15);
+
+            color:#38bdf8;
+
+            font-size:14px;
+
+            font-weight:600;
+
+            margin-bottom:25px;
+        }
+
+        .title{
+
+            font-size:42px;
+
+            font-weight:700;
+
+            margin-bottom:12px;
+
+            line-height:1.2;
+        }
+
+        .subtitle{
+
+            color:#94a3b8;
+
+            font-size:16px;
+
+            line-height:1.7;
+
+            margin-bottom:40px;
+        }
+
+        .job-box{
+
+            background:rgba(255,255,255,0.05);
+
+            border-radius:18px;
+
+            padding:22px;
+
+            margin-bottom:40px;
+
+            border:1px solid rgba(255,255,255,0.06);
+        }
+
+        .job-box h2{
+
+            font-size:28px;
+
+            font-weight:600;
+        }
+
+        /* SCORE */
+
+        .score-wrapper{
+
+            display:flex;
+
+            justify-content:center;
+
+            margin-bottom:35px;
+        }
+
+        .score-circle{
+
+            width:220px;
+
+            height:220px;
+
+            border-radius:50%;
+
+            background:
+                conic-gradient(
+                    #38bdf8 0deg,
+                    #8b5cf6 var(--degree),
+                    rgba(255,255,255,0.08) var(--degree)
+                );
+
+            display:flex;
+
+            justify-content:center;
+
+            align-items:center;
+
+            position:relative;
+
+            animation:pop 0.8s ease;
+        }
+
+        .score-circle::before{
+
+            content:"";
+
+            position:absolute;
+
+            width:175px;
+
+            height:175px;
+
+            background:#0f172a;
+
+            border-radius:50%;
+        }
+
+        .score-value{
+
+            position:relative;
+
+            z-index:10;
+
+            font-size:52px;
+
+            font-weight:800;
+        }
+
+        @keyframes pop{
+
+            from{
+                transform:scale(0.7);
+                opacity:0;
+            }
+
+            to{
+                transform:scale(1);
+                opacity:1;
+            }
+        }
+
+        /* MESSAGE */
+
+        .message-box{
+
+            margin-top:10px;
+
+            margin-bottom:35px;
+
+            padding:28px;
+
+            border-radius:20px;
+
+            line-height:1.9;
+
+            font-size:18px;
+
+            font-weight:500;
+        }
+
+        .excellent{
+            background:rgba(34,197,94,0.15);
+            border:1px solid rgba(34,197,94,0.25);
+            color:#4ade80;
+        }
+
+        .good{
+            background:rgba(59,130,246,0.15);
+            border:1px solid rgba(59,130,246,0.25);
+            color:#60a5fa;
+        }
+
+        .average{
+            background:rgba(251,191,36,0.15);
+            border:1px solid rgba(251,191,36,0.25);
+            color:#facc15;
+        }
+
+        .low{
+            background:rgba(239,68,68,0.15);
+            border:1px solid rgba(239,68,68,0.25);
+            color:#f87171;
+        }
+
+        /* BUTTONS */
+
+        .buttons{
+
+            display:flex;
+
+            justify-content:center;
+
+            gap:20px;
+
+            flex-wrap:wrap;
+        }
+
+        .btn{
+
+            padding:16px 34px;
+
+            border:none;
+
+            border-radius:14px;
+
+            font-size:16px;
+
+            font-weight:600;
+
+            cursor:pointer;
+
+            transition:0.3s;
+        }
+
+        .primary-btn{
+
+            background:linear-gradient(
+                135deg,
+                #38bdf8,
+                #8b5cf6
+            );
+
+            color:white;
+        }
+
+        .secondary-btn{
+
+            background:rgba(255,255,255,0.08);
+
+            color:white;
+
+            border:1px solid rgba(255,255,255,0.08);
+        }
+
+        .btn:hover{
+
+            transform:translateY(-3px);
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width:768px){
+
+            .navbar{
+
+                padding:20px;
+            }
+
+            .nav-links{
+
+                gap:15px;
+            }
+
+            .title{
+
+                font-size:32px;
+            }
+
+            .result-card{
+
+                padding:40px 25px;
+            }
+
+            .score-circle{
+
+                width:180px;
+                height:180px;
+            }
+
+            .score-circle::before{
+
+                width:140px;
+                height:140px;
+            }
+
+            .score-value{
+
+                font-size:40px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+
+            JobMatch AI
+
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="jobs.html">Jobs</a>
+
+            <a href="upload.html">Upload Resume</a>
+
+        </div>
+
+    </nav>
+
+    <div class="main-container">
+
+        <div class="result-card">
+
+            <div class="badge">
+
+                AI Analysis Completed
+
+            </div>
+
+            <h1 class="title">
+
+                Resume Match Result
+
+            </h1>
+
+            <p class="subtitle">
+
+                Your resume was analyzed using advanced
+                BERT semantic matching technology.
+
+            </p>
+
+            <div class="job-box">
+
+                <h2 id="jobTitle">
+
+                    Java Backend Developer
+
+                </h2>
+
+            </div>
+
+            <div class="score-wrapper">
+
+                <div class="score-circle"
+                     id="scoreCircle">
+
+                    <div class="score-value"
+                         id="scoreValue">
+
+                        0%
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="message-box"
+                 id="messageBox">
+
+            </div>
+
+            <div class="buttons">
+
+                <button class="btn primary-btn"
+                        onclick="window.location.href='jobs.html'">
+
+                    Apply Another Job
+
+                </button>
+
+                <button class="btn secondary-btn"
+                        onclick="window.location.href='upload.html'">
+
+                    Upload New Resume
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        const score =
+            parseInt(
+                sessionStorage.getItem('matchScore')
+            ) || 0;
+
+        const jobTitle =
+            sessionStorage.getItem('jobTitle')
+            || "Selected Job";
+
+        document.getElementById('jobTitle')
+            .innerText = jobTitle;
+
+        const scoreValue =
+            document.getElementById('scoreValue');
+
+        const scoreCircle =
+            document.getElementById('scoreCircle');
+
+        const messageBox =
+            document.getElementById('messageBox');
+
+        const degree =
+            (score / 100) * 360;
+
+        scoreCircle.style.setProperty(
+            '--degree',
+            degree + 'deg'
+        );
+
+        let current = 0;
+
+        const interval = setInterval(() => {
+
+            if(current >= score){
+
+                clearInterval(interval);
+
+            } else {
+
+                current++;
+
+                scoreValue.innerText =
+                    current + "%";
+            }
+
+        },15);
+
+        if(score >= 85){
+
+            messageBox.className =
+                "message-box excellent";
+
+            messageBox.innerHTML = `
+
+                <h2>Excellent Match 🚀</h2>
+
+                <br>
+
+                Your resume strongly matches
+                this job role and skills.
+
+            `;
+        }
+
+        else if(score >= 65){
+
+            messageBox.className =
+                "message-box good";
+
+            messageBox.innerHTML = `
+
+                <h2>Good Match ✅</h2>
+
+                <br>
+
+                Your profile matches many
+                important requirements.
+
+            `;
+        }
+
+        else if(score >= 40){
+
+            messageBox.className =
+                "message-box average";
+
+            messageBox.innerHTML = `
+
+                <h2>Average Match ⚡</h2>
+
+                <br>
+
+                Some skills align with
+                this job role.
+
+            `;
+        }
+
+        else{
+
+            messageBox.className =
+                "message-box low";
+
+            messageBox.innerHTML = `
+
+                <h2>Low Match ❌</h2>
+
+                <br>
+
+                Your resume needs more relevant
+                skills for this role.
+
+            `;
+        }
+
+    </script>
+
+</body>
+
+</html>
